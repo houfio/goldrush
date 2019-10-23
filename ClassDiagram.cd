@@ -27,7 +27,7 @@
   <Class Name="GoldRush.Views.Impl.StartView">
     <Position X="12" Y="13.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Views\Impl\StartView.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -67,7 +67,7 @@
   <Class Name="GoldRush.Models.Game">
     <Position X="11" Y="6.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAABAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\Game.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -77,41 +77,26 @@
   <Class Name="GoldRush.Controllers.Impl.StartController">
     <Position X="6" Y="13" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAACAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAQAAAAAACAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAQAA=</HashCode>
       <FileName>Controllers\Impl\StartController.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GoldRush.Controllers.Impl.GameController">
     <Position X="8" Y="13" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>ABQAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Controllers\Impl\GameController.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GoldRush.Models.Map">
-    <Position X="8.25" Y="6.5" Width="1.5" />
+    <Position X="8" Y="5.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAABIAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAABCAAQQAABAAAAEAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\Map.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
-      <Field Name="_tiles" />
-      <Field Name="_entities" />
+      <Field Name="_tracks" />
     </ShowAsCollectionAssociation>
-  </Class>
-  <Class Name="GoldRush.Models.Tile">
-    <Position X="5.5" Y="6.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Models\Tiles\Tile.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="GoldRush.Models.Entity">
-    <Position X="8.25" Y="4" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Models\Entities\Entity.cs</FileName>
-    </TypeIdentifier>
   </Class>
   <Class Name="GoldRush.Controllers.Impl.OverController">
     <Position X="10" Y="13" Width="1.5" />
@@ -127,5 +112,36 @@
       <FileName>Views\Impl\OverView.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="GoldRush.Models.Track">
+    <Position X="5.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAgAgAAAIAAAAEAAAAAAAAEAAAAQAAAA=</HashCode>
+      <FileName>Models\Track.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Cart" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="GoldRush.Models.DirectionExtension">
+    <Position X="12.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Models\Direction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoldRush.Models.Cart">
+    <Position X="5.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Models\Cart.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="GoldRush.Models.Direction">
+    <Position X="11" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAABAAQ=</HashCode>
+      <FileName>Models\Direction.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
