@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using Pastel;
+using System.Drawing;
 
 namespace GoldRush.Models.Tracks
 {
@@ -8,9 +9,9 @@ namespace GoldRush.Models.Tracks
         {
         }
 
-        public override Color GetColor()
+        public override string Draw()
         {
-            return Cart == null ? Color.Blue : Cart.GetColor();
+            return "░".Pastel(GetColor()).PastelBg(Color.Blue);
         }
 
         public override void OnEnter()

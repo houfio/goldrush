@@ -1,4 +1,7 @@
-﻿namespace GoldRush.Models.Tracks
+﻿using Pastel;
+using System.Drawing;
+
+namespace GoldRush.Models.Tracks
 {
     public class SwitchTrack : Track
     {
@@ -8,6 +11,8 @@
         {
             _switchOutput = switchOutput;
         }
+
+        public override string Draw() => base.Draw().PastelBg(Color.Gray);
 
         public override bool HasAction()
         {

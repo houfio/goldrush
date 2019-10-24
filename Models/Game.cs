@@ -21,7 +21,7 @@ namespace GoldRush.Models
 
         public void Update()
         {
-            if (_update++ % 25 == 0)
+            if (_update++ % 40 == 0)
             {
                 IncreaseDifficulty();
             }
