@@ -42,7 +42,7 @@ namespace GoldRush.Views.Impl
                 builder.Append("\n");
             }
 
-            builder.AppendLine("Press S to start!");
+            builder.AppendLine("press s to start");
         }
     }
 }

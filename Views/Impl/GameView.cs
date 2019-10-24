@@ -31,10 +31,19 @@ namespace GoldRush.Views.Impl
                 builder.AppendLine("│");
             }
 
-            builder.AppendLine($"└{new string('─', width)}┘");
-            builder.AppendLine(_controller.GetSwitches());
-            builder.AppendLine(" Press a number");
-            builder.AppendLine(" To switch");
+            var underline = new StringBuilder(new string('─', width));
+            var switches = _controller.GetSwitches();
+
+            for (var i = 0; i < switches.Length; i++)
+            {
+                if (switches[i] != ' ')
+                {
+                    underline[i] = '┬';
+                }
+            }
+
+            builder.AppendLine($"└{underline}┘");
+            builder.AppendLine($" {switches} ");
         }
     }
 

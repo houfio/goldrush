@@ -1,6 +1,5 @@
 ﻿using GoldRush.Views;
 using GoldRush.Views.Impl;
-using System.Collections.Generic;
 using System.Text;
 
 namespace GoldRush.Controllers.Impl
@@ -48,19 +47,18 @@ namespace GoldRush.Controllers.Impl
         public string GetSwitches()
         {
             var map = _program.Game.Map;
-            StringBuilder Switches = new StringBuilder($"{ new string(' ', map.Width) }");
-            int amountOfSwitches = 1;
-            char Number;
+            var switches = new StringBuilder($"{new string(' ', map.Width)}");
+            var count = 0;
+
             map.Each((x, y, track) =>
             {
-                if(track != null && track.HasAction())
+                if (track != null && track.HasAction())
                 {
-                    Number = $"{amountOfSwitches}".ToCharArray()[0];
-                    Switches[x + 1] = Number;
-                    amountOfSwitches++;
+                    switches[x] = $"{++count}"[0];
                 }
             });
-            return Switches.ToString();
+
+            return switches.ToString();
         }
 
         public void ToggleSwitch(int number)
