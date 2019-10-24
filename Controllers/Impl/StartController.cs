@@ -24,7 +24,7 @@ namespace GoldRush.Controllers.Impl
         public void Start()
         {
             _program.Game.Initialize();
-            _program.OpenController(new GameController(_program));
+            _program.OpenController<GameController>();
         }
     }
 }

@@ -25,8 +25,10 @@ namespace GoldRush
             Task.Run(Input).Wait();
         }
 
-        public void OpenController<T>(Controller<T> controller) where T : Controller<T>
+        public void OpenController<T>() where T : Controller<T>
         {
+            var controller = (T)Activator.CreateInstance(typeof(T), new object[] { this });
+
             _controller = controller;
             _view = controller.CreateView();
 
@@ -40,7 +42,7 @@ namespace GoldRush
 
         private void Initialize()
         {
-            OpenController(new StartController(this));
+            OpenController<StartController>();
         }
 
         private void Input()
