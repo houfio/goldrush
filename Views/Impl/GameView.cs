@@ -32,7 +32,7 @@ namespace GoldRush.Views.Impl
             }
 
             builder.AppendLine($"└{new string('─', width)}┘");
-            builder.AppendLine("     1 23 45    ");
+            builder.AppendLine(_controller.GetSwitches());
             builder.AppendLine(" Press a number");
             builder.AppendLine(" To switch");
         }
