@@ -1,5 +1,6 @@
 ﻿using GoldRush.Views;
 using GoldRush.Views.Impl;
+using System.Collections.Generic;
 
 namespace GoldRush.Controllers.Impl
 {
@@ -30,6 +31,8 @@ namespace GoldRush.Controllers.Impl
 
             return drawn;
         }
+
+        
 
         public void ToggleSwitch(int number)
         {

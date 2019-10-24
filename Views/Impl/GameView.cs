@@ -30,6 +30,10 @@ namespace GoldRush.Views.Impl
             }
 
             builder.AppendLine($"└{new string('─', width)}┘");
+            builder.AppendLine(map.);
+            builder.AppendLine("     1 23 45    ");
+            builder.AppendLine(" Press a number");
+            builder.AppendLine(" To switch");
         }
     }
 
