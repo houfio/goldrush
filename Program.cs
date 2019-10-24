@@ -16,6 +16,7 @@ namespace GoldRush
         private bool _running = true;
         private Controller _controller;
         private View _view;
+        private bool _queueClear = false;
 
         public Program()
         {
@@ -31,8 +32,7 @@ namespace GoldRush
 
             _controller = controller;
             _view = controller.CreateView();
-
-            Console.Clear();
+            _queueClear = true;
         }
 
         public void Stop()
@@ -73,6 +73,13 @@ namespace GoldRush
                 var builder = new StringBuilder();
 
                 _view.Draw(builder);
+
+                if (_queueClear)
+                {
+                    Console.Clear();
+
+                    _queueClear = false;
+                }
 
                 Console.SetCursorPosition(0, 0);
                 Console.Write(builder.ToString());
