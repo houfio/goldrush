@@ -1,5 +1,4 @@
-﻿using System;
-using System.Text;
+﻿using System.Text;
 using GoldRush.Controllers.Impl;
 
 namespace GoldRush.Views.Impl
@@ -13,16 +12,24 @@ namespace GoldRush.Views.Impl
         public override void Draw(StringBuilder builder)
         {
             var map = _controller.GetMap();
+            var width = map.GetLength(0);
+            var height = map.GetLength(1);
 
-            for (var y = 0; y < map.GetLength(1); y++)
+            builder.AppendLine($"┌{new string('─', width)}┐");
+
+            for (var y = 0; y < height; y++)
             {
-                for (var x = 0; x < map.GetLength(0); x++)
+                builder.Append("│");
+
+                for (var x = 0; x < width; x++)
                 {
-                    builder.Append(map[x, y]);
+                    builder.Append($"{map[x, y]}");
                 }
 
-                builder.AppendLine();
+                builder.AppendLine("│");
             }
+
+            builder.AppendLine($"└{new string('─', width)}┘");
         }
     }
 
