@@ -5,9 +5,8 @@ namespace GoldRush.Models
     public class Game
     {
         public Map Map { get; private set; }
-        public int Difficulty { get; private set; }
-
-        private int _update;
+        public int Interval { get; private set; }
+        public int Tick { get; private set; }
 
         public void Initialize()
         {
@@ -15,28 +14,25 @@ namespace GoldRush.Models
 
             map.Initialize(this);
 
-            _update = Difficulty = 25;
+            Tick = 0;
+            Interval = 25;
             Map = map;
         }
 
         public void Update()
         {
-            if (_update++ % 40 == 0)
-            {
-                IncreaseDifficulty();
-            }
-
-            if (Map == null || _update++ % Difficulty != 0)
+            if (Map == null || ++Tick != Interval)
             {
                 return;
             }
 
             Map.Update();
+            Tick = 0;
         }
 
-        public void IncreaseDifficulty()
+        public void DecreaseInterval()
         {
-            Difficulty = Math.Max(Difficulty - 2, 2);
+            Interval = Math.Max(Interval - 1, 2);
         }
     }
 }

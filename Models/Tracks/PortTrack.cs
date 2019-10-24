@@ -17,6 +17,7 @@ namespace GoldRush.Models.Tracks
         public override void OnEnter()
         {
             Cart.Full = false;
+            _game.DecreaseInterval();
         }
     }
 }

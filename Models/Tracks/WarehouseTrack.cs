@@ -19,7 +19,7 @@ namespace GoldRush.Models.Tracks
 
         public override Cart Update()
         {
-            if (_game.Map.Random.Next(50 - _game.Difficulty) != 0)
+            if (_game.Map.Random.Next(40 - _game.Interval) != 0)
             {
                 return null;
             }
