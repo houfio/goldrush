@@ -10,7 +10,7 @@ namespace GoldRush.Models.Tracks
 
         public override Color GetColor()
         {
-            return Cart == null ? Color.Green : Color.DarkGreen;
+            return Cart == null ? Color.Green : Color.GreenYellow;
         }
 
         public override bool CanCrash()

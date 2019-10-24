@@ -15,13 +15,13 @@
             switch (direction)
             {
                 case Direction.North:
-                    return (position.x - 1, position.y);
-                case Direction.East:
-                    return (position.x, position.y + 1);
-                case Direction.South:
-                    return (position.x + 1, position.y);
-                case Direction.West:
                     return (position.x, position.y - 1);
+                case Direction.East:
+                    return (position.x + 1, position.y);
+                case Direction.South:
+                    return (position.x, position.y + 1);
+                case Direction.West:
+                    return (position.x - 1, position.y);
             }
 
             return position;

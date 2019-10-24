@@ -10,9 +10,9 @@ namespace GoldRush.Models
         public (int x, int y) Position => _map.GetPosition(this);
         public Direction Input { get; protected set; }
         public Direction Output { get; protected set; }
-        public Cart Cart { get; protected set; }
+        public Cart Cart { get; internal set; }
 
-        private readonly Map _map;
+        protected readonly Map _map;
         private readonly Dictionary<(Direction, Direction), string> _symbols = new Dictionary<(Direction, Direction), string>
         {
             { (Direction.West, Direction.East), "─" },
@@ -40,7 +40,7 @@ namespace GoldRush.Models
 
         public virtual Color GetColor()
         {
-            return Cart == null ? Color.White : Color.Red;
+            return Cart == null ? Color.White : Cart.GetColor();
         }
 
         public virtual bool HasAction()
@@ -52,33 +52,35 @@ namespace GoldRush.Models
         {
         }
 
-        public virtual void Update()
+        public virtual Cart Update()
         {
             if (Cart == null)
             {
-                return;
+                return null;
             }
 
             var next = Output.Offset(Position);
             var track = _map.GetTrack(next);
 
-            if (track.Input != Output.Opposite())
+            if (track == null || track.Input != Output.Opposite())
             {
-                return;
+                return null;
             }
 
             if (track.Cart != null)
             {
-                if (!CanCrash())
+                if (CanCrash())
                 {
-                    return;
+                    // gane over
                 }
 
-                // gane over
+                return null;
             }
 
             track.Cart = Cart;
             Cart = null;
+
+            return track.Cart;
         }
 
         public virtual bool CanCrash()

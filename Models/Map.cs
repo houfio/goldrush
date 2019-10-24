@@ -1,5 +1,6 @@
 ﻿using GoldRush.Models.Tracks;
 using System;
+using System.Collections.Generic;
 
 namespace GoldRush.Models
 {
@@ -114,11 +115,20 @@ namespace GoldRush.Models
 
         public void Update()
         {
+            var updated = new List<Cart>();
+
             Each((x, y, track) =>
             {
-                if (track != null)
+                if (track == null || (track.Cart != null && updated.Contains(track.Cart)))
                 {
-                    track.Update();
+                    return;
+                }
+
+                var cart = track.Update();
+
+                if (cart != null)
+                {
+                    updated.Add(cart);
                 }
             });
         }

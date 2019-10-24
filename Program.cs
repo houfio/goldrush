@@ -65,6 +65,7 @@ namespace GoldRush
         {
             while (_running)
             {
+                Game.Update();
                 _controller.Update();
 
                 var builder = new StringBuilder();
