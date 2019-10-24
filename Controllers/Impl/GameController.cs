@@ -20,6 +20,11 @@ namespace GoldRush.Controllers.Impl
             return new GameView(this);
         }
 
+        public string GetScore()
+        {
+            return _program.Game.Score.ToString();
+        }
+
         public string GetTime()
         {
             var left = _program.Game.Interval - _program.Game.Tick;

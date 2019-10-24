@@ -5,8 +5,10 @@ namespace GoldRush.Models
     public class Game
     {
         public Map Map { get; private set; }
+        public int Score { get; set; }
         public int Interval { get; private set; }
         public int Tick { get; private set; }
+        public Random Random { get; } = new Random();
 
         public void Initialize()
         {
@@ -14,6 +16,7 @@ namespace GoldRush.Models
 
             map.Initialize(this);
 
+            Score = 0;
             Tick = 0;
             Interval = 25;
             Map = map;
@@ -32,7 +35,7 @@ namespace GoldRush.Models
 
         public void DecreaseInterval()
         {
-            Interval = Math.Max(Interval - 1, 2);
+            Interval = Math.Max(Interval - 1, 1);
         }
     }
 }

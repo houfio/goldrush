@@ -8,7 +8,6 @@ namespace GoldRush.Models
     {
         public int Width => _tracks.GetLength(0);
         public int Height => _tracks.GetLength(1);
-        public Random Random { get; } = new Random();
 
         private readonly Track[,] _tracks = new Track[14, 8];
 
