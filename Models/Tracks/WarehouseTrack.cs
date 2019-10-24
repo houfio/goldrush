@@ -1,15 +1,13 @@
 ﻿using Pastel;
-using System;
 using System.Drawing;
 
 namespace GoldRush.Models.Tracks
 {
     public class WarehouseTrack : Track
     {
-        private readonly Random _random = new Random();
         private string _number;
 
-        public WarehouseTrack(Map map, string number) : base(map, Direction.East, Direction.East)
+        public WarehouseTrack(Game game, string number) : base(game, Direction.East, Direction.East)
         {
             _number = number;
         }
@@ -21,13 +19,13 @@ namespace GoldRush.Models.Tracks
 
         public override Cart Update()
         {
-            if (_random.Next(8) != 0)
+            if (_game.Map.Random.Next(50 - _game.Difficulty) != 0)
             {
                 return null;
             }
 
             var position = Output.Offset(Position);
-            var track = _map.GetTrack(position);
+            var track = _game.Map.GetTrack(position);
 
             if (track == null || (track.Cart != null && track.CanCrash()))
             {
@@ -38,7 +36,7 @@ namespace GoldRush.Models.Tracks
 
             track.Cart = new Cart();
 
-            return null;
+            return track.Cart;
         }
     }
 }

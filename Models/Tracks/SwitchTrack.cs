@@ -4,7 +4,7 @@
     {
         private bool _switchOutput;
 
-        public SwitchTrack(Map map, Direction input, Direction output, bool switchOutput) : base(map, input, output)
+        public SwitchTrack(Game game, Direction input, Direction output, bool switchOutput) : base(game, input, output)
         {
             _switchOutput = switchOutput;
         }

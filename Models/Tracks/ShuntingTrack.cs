@@ -4,7 +4,7 @@ namespace GoldRush.Models.Tracks
 {
     public class ShuntingTrack : Track
     {
-        public ShuntingTrack(Map map, Direction input, Direction output) : base(map, input, output)
+        public ShuntingTrack(Game game, Direction input, Direction output) : base(game, input, output)
         {
         }
 

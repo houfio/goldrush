@@ -53,7 +53,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="GoldRush.Program">
-    <Position X="11" Y="8.25" Width="1.5" />
+    <Position X="11" Y="9.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAAQAAAAAAAAAAEAgAABAAICAABEAAAQA=</HashCode>
       <FileName>Program.cs</FileName>
@@ -65,9 +65,15 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="GoldRush.Models.Game">
-    <Position X="11" Y="6.5" Width="1.5" />
+    <Position X="11" Y="6" Width="1.5" />
+    <AssociationLine Name="Map" Type="GoldRush.Models.Map" FixedFromPoint="true">
+      <Path>
+        <Point X="11" Y="6.75" />
+        <Point X="9.5" Y="6.75" />
+      </Path>
+    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAABAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAQAAAAAADAAAQEAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\Game.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -89,9 +95,9 @@
     </TypeIdentifier>
   </Class>
   <Class Name="GoldRush.Models.Map">
-    <Position X="8" Y="5.5" Width="1.5" />
+    <Position X="8" Y="5.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAABCAAQQAABAAAAEAAAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <HashCode>AAQAAAAABCAAQQAABAAAAEAAAAAABAAAAAAAEAAAAAA=</HashCode>
       <FileName>Models\Map.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
@@ -115,10 +121,11 @@
   <Class Name="GoldRush.Models.Track">
     <Position X="5.25" Y="5.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAEAgAAIAEgAgAAAIAAAAEAAAAACAAEAAAAQAAAA=</HashCode>
+      <HashCode>AAQAAEAgAAIAEgAgAAAIAAAAEAAAAACAAAAAAAQAAAQ=</HashCode>
       <FileName>Models\Tracks\Track.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
+      <Field Name="_game" />
       <Property Name="Cart" />
     </ShowAsAssociation>
   </Class>
@@ -130,9 +137,9 @@
     </TypeIdentifier>
   </Class>
   <Class Name="GoldRush.Models.Cart">
-    <Position X="2.25" Y="5.75" Width="1.5" />
+    <Position X="2.25" Y="6" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAgAAAAAAAAA=</HashCode>
       <FileName>Models\Cart.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -146,7 +153,7 @@
   <Class Name="GoldRush.Models.Tracks.WarehouseTrack">
     <Position X="5.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <HashCode>AAQAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
       <FileName>Models\Tracks\WarehouseTrack.cs</FileName>
     </TypeIdentifier>
   </Class>

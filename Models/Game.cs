@@ -5,29 +5,33 @@ namespace GoldRush.Models
     public class Game
     {
         public Map Map { get; private set; }
+        public int Difficulty { get; private set; }
 
         private int _update;
-        private int _difficulty = 10;
 
         public void Initialize()
         {
             var map = new Map();
 
-            map.Initialize();
+            map.Initialize(this);
 
-            _update = 0;
+            _update = Difficulty = 40;
             Map = map;
         }
 
         public void Update()
         {
-            if (Map == null || _update++ % _difficulty != 0)
+            if (Map == null || _update++ % Difficulty != 0)
             {
                 return;
             }
 
             Map.Update();
-            _difficulty = Math.Max(_difficulty - 1, 10);
+        }
+
+        public void IncreaseDifficulty()
+        {
+            Difficulty = Math.Max(Difficulty - 2, 5);
         }
     }
 }
