@@ -40,9 +40,11 @@ namespace GoldRush.Models
             _tracks[3, 4] = new Track(this, Direction.West, Direction.South);
             _tracks[2, 4] = new Track(this, Direction.West, Direction.East);
             _tracks[1, 4] = new Track(this, Direction.West, Direction.East);
+            _tracks[0, 4] = new WarehouseTrack(this, "A");
             _tracks[3, 6] = new Track(this, Direction.West, Direction.North);
             _tracks[2, 6] = new Track(this, Direction.West, Direction.East);
             _tracks[1, 6] = new Track(this, Direction.West, Direction.East);
+            _tracks[0, 6] = new WarehouseTrack(this, "B");
             _tracks[9, 6] = new Track(this, Direction.West, Direction.North);
             _tracks[8, 6] = new Track(this, Direction.South, Direction.East);
             _tracks[8, 7] = new SwitchTrack(this, Direction.West, Direction.North, true);
@@ -56,6 +58,7 @@ namespace GoldRush.Models
             _tracks[3, 8] = new Track(this, Direction.West, Direction.East);
             _tracks[2, 8] = new Track(this, Direction.West, Direction.East);
             _tracks[1, 8] = new Track(this, Direction.West, Direction.East);
+            _tracks[0, 8] = new WarehouseTrack(this, "C");
             _tracks[8, 8] = new Track(this, Direction.North, Direction.East);
             _tracks[9, 8] = new Track(this, Direction.West, Direction.East);
             _tracks[10, 8] = new Track(this, Direction.West, Direction.East);
@@ -63,6 +66,14 @@ namespace GoldRush.Models
             _tracks[11, 9] = new Track(this, Direction.North, Direction.West);
             _tracks[10, 9] = new Track(this, Direction.East, Direction.West);
             _tracks[9, 9] = new Track(this, Direction.East, Direction.West);
+            _tracks[8, 9] = new ShuntingTrack(this, Direction.East, Direction.West);
+            _tracks[7, 9] = new ShuntingTrack(this, Direction.East, Direction.West);
+            _tracks[6, 9] = new ShuntingTrack(this, Direction.East, Direction.West);
+            _tracks[5, 9] = new ShuntingTrack(this, Direction.East, Direction.West);
+            _tracks[4, 9] = new ShuntingTrack(this, Direction.East, Direction.West);
+            _tracks[3, 9] = new ShuntingTrack(this, Direction.East, Direction.West);
+            _tracks[2, 9] = new ShuntingTrack(this, Direction.East, Direction.West);
+            _tracks[1, 9] = new ShuntingTrack(this, Direction.East, Direction.West);
         }
 
         public (int x, int y) GetPosition(Track track)
@@ -99,6 +110,17 @@ namespace GoldRush.Models
                     action(x, y, _tracks[x, y]);
                 }
             }
+        }
+
+        public void Update()
+        {
+            Each((x, y, track) =>
+            {
+                if (track != null)
+                {
+                    track.Update();
+                }
+            });
         }
     }
 }

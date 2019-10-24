@@ -91,7 +91,7 @@
   <Class Name="GoldRush.Models.Map">
     <Position X="8" Y="5.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAABCAAQQAABAAAAEAAAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <HashCode>AAQAAAAABCAAQQAABAAAAEAAAAAAAAAAAAAAEAAAAAA=</HashCode>
       <FileName>Models\Map.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
@@ -115,8 +115,8 @@
   <Class Name="GoldRush.Models.Track">
     <Position X="5.25" Y="5.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAEAgAAIAAgAgAAAIAAAAEAAAAAAAAEAAAAQAAAA=</HashCode>
-      <FileName>Models\Track.cs</FileName>
+      <HashCode>AAQAAEAgAAIAEgAgAAAIAAAAEAAAAACAAEAAAAQAAAA=</HashCode>
+      <FileName>Models\Tracks\Track.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Cart" />
@@ -130,17 +130,31 @@
     </TypeIdentifier>
   </Class>
   <Class Name="GoldRush.Models.Cart">
-    <Position X="5.25" Y="3.75" Width="1.5" />
+    <Position X="2.25" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
       <FileName>Models\Cart.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GoldRush.Models.Tracks.SwitchTrack">
-    <Position X="2.75" Y="5.5" Width="1.5" />
+    <Position X="7.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAgAAIAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\Tracks\SwitchTrack.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoldRush.Models.Tracks.WarehouseTrack">
+    <Position X="5.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Models\Tracks\WarehouseTrack.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoldRush.Models.Tracks.ShuntingTrack">
+    <Position X="3.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Tracks\ShuntingTrack.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Enum Name="GoldRush.Models.Direction">

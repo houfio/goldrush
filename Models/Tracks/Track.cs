@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using Pastel;
+using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 
 namespace GoldRush.Models
@@ -33,7 +35,12 @@ namespace GoldRush.Models
         {
             var symbol = _symbols.Keys.Where((key) => (key.Item1 == Input && key.Item2 == Output) || (key.Item1 == Output && key.Item2 == Input)).First();
 
-            return _symbols[symbol];
+            return _symbols[symbol].Pastel(GetColor());
+        }
+
+        public virtual Color GetColor()
+        {
+            return Cart == null ? Color.White : Color.Red;
         }
 
         public virtual bool HasAction()
@@ -43,6 +50,40 @@ namespace GoldRush.Models
 
         public virtual void PerformAction()
         {
+        }
+
+        public virtual void Update()
+        {
+            if (Cart == null)
+            {
+                return;
+            }
+
+            var next = Output.Offset(Position);
+            var track = _map.GetTrack(next);
+
+            if (track.Input != Output.Opposite())
+            {
+                return;
+            }
+
+            if (track.Cart != null)
+            {
+                if (!CanCrash())
+                {
+                    return;
+                }
+
+                // gane over
+            }
+
+            track.Cart = Cart;
+            Cart = null;
+        }
+
+        public virtual bool CanCrash()
+        {
+            return true;
         }
     }
 }
