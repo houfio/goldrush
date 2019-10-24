@@ -16,6 +16,11 @@
 
         public override void PerformAction()
         {
+            if (Cart != null)
+            {
+                return;
+            }
+
             if (_switchOutput)
             {
                 Output = Output.Opposite();
