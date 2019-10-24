@@ -71,7 +71,7 @@ namespace GoldRush.Models
             {
                 if (CanCrash())
                 {
-                    // gane over
+                    _game.GameOver();
                 }
 
                 return null;

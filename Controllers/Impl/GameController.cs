@@ -12,6 +12,10 @@ namespace GoldRush.Controllers.Impl
 
         public override void Update()
         {
+            if (_program.Game.Over)
+            {
+                _program.OpenController<OverController>();
+            }
         }
 
         public override View<GameController> CreateView()

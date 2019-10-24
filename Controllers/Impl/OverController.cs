@@ -17,5 +17,11 @@ namespace GoldRush.Controllers.Impl
         {
             return new OverView(this);
         }
+
+        public void Restart()
+        {
+            _program.Game.Initialize();
+            _program.OpenController<GameController>();
+        }
     }
 }

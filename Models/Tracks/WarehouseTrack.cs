@@ -19,7 +19,7 @@ namespace GoldRush.Models.Tracks
 
         public override Cart Update()
         {
-            if (_game.Random.Next(30 - _game.Interval / 2) != 0)
+            if (_game.Random.Next(30 - _game.Interval) != 0)
             {
                 return null;
             }
@@ -29,8 +29,6 @@ namespace GoldRush.Models.Tracks
 
             if (track == null || (track.Cart != null && track.CanCrash()))
             {
-                // game over
-
                 return null;
             }
 
