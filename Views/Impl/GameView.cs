@@ -15,6 +15,8 @@ namespace GoldRush.Views.Impl
             var width = map.GetLength(0);
             var height = map.GetLength(1);
 
+            builder.AppendLine($"score: {0}");
+            builder.AppendLine($"time: {_controller.GetTime()}s");
             builder.AppendLine($"┌{new string('─', width)}┐");
 
             for (var y = 0; y < height; y++)

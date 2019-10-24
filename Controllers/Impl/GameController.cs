@@ -18,6 +18,13 @@ namespace GoldRush.Controllers.Impl
             return new GameView(this);
         }
 
+        public string GetTime()
+        {
+            var left = _program.Game.Interval - _program.Game.Tick;
+
+            return (left / 10f).ToString("0.0");
+        }
+
         public string[,] GetMap()
         {
             var map = _program.Game.Map;
