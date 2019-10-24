@@ -14,7 +14,7 @@ namespace GoldRush.Models
 
         public void Initialize(Game game)
         {
-            _tracks[0, 2] = new Track(game, Direction.East, Direction.West);
+            _tracks[0, 2] = new DestroyTrack(game, Direction.East, Direction.West);
             _tracks[1, 2] = new Track(game, Direction.East, Direction.West);
             _tracks[2, 2] = new Track(game, Direction.East, Direction.West);
             _tracks[3, 2] = new Track(game, Direction.East, Direction.West);
@@ -23,7 +23,7 @@ namespace GoldRush.Models
             _tracks[6, 2] = new Track(game, Direction.East, Direction.West);
             _tracks[7, 2] = new Track(game, Direction.East, Direction.West);
             _tracks[8, 2] = new Track(game, Direction.East, Direction.West);
-            // port
+            _tracks[9, 2] = new PortTrack(game, Direction.East, Direction.West);
             _tracks[10, 2] = new Track(game, Direction.East, Direction.West);
             _tracks[11, 2] = new Track(game, Direction.South, Direction.West);
             _tracks[11, 3] = new Track(game, Direction.South, Direction.North);

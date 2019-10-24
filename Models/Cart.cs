@@ -4,11 +4,11 @@ namespace GoldRush.Models
 {
     public class Cart
     {
-        public bool Full { get; private set; } = true;
+        public bool Full { get; set; } = true;
 
         public virtual Color GetColor()
         {
-            return Full ? Color.Orange : Color.Yellow;
+            return Full ? Color.Orange : Color.Red;
         }
     }
 }

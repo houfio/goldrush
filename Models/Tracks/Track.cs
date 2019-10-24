@@ -78,6 +78,8 @@ namespace GoldRush.Models
             }
 
             track.Cart = Cart;
+            track.OnEnter();
+
             Cart = null;
 
             return track.Cart;
@@ -86,6 +88,10 @@ namespace GoldRush.Models
         public virtual bool CanCrash()
         {
             return true;
+        }
+
+        public virtual void OnEnter()
+        {
         }
     }
 }

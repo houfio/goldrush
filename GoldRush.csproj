@@ -55,6 +55,8 @@
     <Compile Include="Models\Direction.cs" />
     <Compile Include="Models\Game.cs" />
     <Compile Include="Models\Map.cs" />
+    <Compile Include="Models\Tracks\DestroyTrack.cs" />
+    <Compile Include="Models\Tracks\PortTrack.cs" />
     <Compile Include="Models\Tracks\ShuntingTrack.cs" />
     <Compile Include="Models\Tracks\Track.cs" />
     <Compile Include="Models\Tracks\SwitchTrack.cs" />

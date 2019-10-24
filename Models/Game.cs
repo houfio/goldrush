@@ -15,12 +15,17 @@ namespace GoldRush.Models
 
             map.Initialize(this);
 
-            _update = Difficulty = 40;
+            _update = Difficulty = 25;
             Map = map;
         }
 
         public void Update()
         {
+            if (_update++ % 25 == 0)
+            {
+                IncreaseDifficulty();
+            }
+
             if (Map == null || _update++ % Difficulty != 0)
             {
                 return;
@@ -31,7 +36,7 @@ namespace GoldRush.Models
 
         public void IncreaseDifficulty()
         {
-            Difficulty = Math.Max(Difficulty - 2, 5);
+            Difficulty = Math.Max(Difficulty - 2, 2);
         }
     }
 }

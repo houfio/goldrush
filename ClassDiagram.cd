@@ -1,11 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="GoldRush.Views.View">
-    <Position X="14" Y="8.75" Width="1.5" />
+    <Position X="14" Y="9" Width="1.5" />
+    <Members>
+      <Field Name="_inputs" Hidden="true" />
+    </Members>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAgAAAAAAAAAEEAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Views\View.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_inputs" />
+    </ShowAsAssociation>
     <ShowAsCollectionAssociation>
       <Property Name="Inputs" />
     </ShowAsCollectionAssociation>
@@ -120,17 +126,24 @@
   </Class>
   <Class Name="GoldRush.Models.Track">
     <Position X="5.25" Y="5.5" Width="1.5" />
+    <AssociationLine Name="Output" Type="GoldRush.Models.Direction">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.857" Y="0.1" />
+      </MemberNameLabel>
+    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAQAAEAgAAIAEgAgAAAIAAAAEAAAAACAAAAAAAQAAAQ=</HashCode>
+      <HashCode>AAQAAEAgAAIAEgAgAAAIAAAAEAAAAACAAIAAAAQAAAQ=</HashCode>
       <FileName>Models\Tracks\Track.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Field Name="_game" />
+      <Property Name="Input" />
+      <Property Name="Output" />
       <Property Name="Cart" />
     </ShowAsAssociation>
   </Class>
   <Class Name="GoldRush.Models.DirectionExtension">
-    <Position X="12.75" Y="4.25" Width="1.5" />
+    <Position X="3.25" Y="10" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAgAA=</HashCode>
       <FileName>Models\Direction.cs</FileName>
@@ -164,8 +177,22 @@
       <FileName>Models\Tracks\ShuntingTrack.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="GoldRush.Models.Tracks.DestroyTrack">
+    <Position X="9.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Tracks\DestroyTrack.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoldRush.Models.Tracks.PortTrack">
+    <Position X="1.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAIAAAAAAAAA=</HashCode>
+      <FileName>Models\Tracks\PortTrack.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Enum Name="GoldRush.Models.Direction">
-    <Position X="11" Y="4.25" Width="1.5" />
+    <Position X="5.25" Y="10" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AACAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAABAAQ=</HashCode>
       <FileName>Models\Direction.cs</FileName>
