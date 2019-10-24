@@ -35,5 +35,14 @@ namespace GoldRush.Models
 
             return _symbols[symbol];
         }
+
+        public virtual bool HasAction()
+        {
+            return false;
+        }
+
+        public virtual void PerformAction()
+        {
+        }
     }
 }

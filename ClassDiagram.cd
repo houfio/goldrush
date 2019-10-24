@@ -84,14 +84,14 @@
   <Class Name="GoldRush.Controllers.Impl.GameController">
     <Position X="8" Y="13" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ABQAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>ABQAAAAAAAAAAAAAAAEgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Controllers\Impl\GameController.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GoldRush.Models.Map">
     <Position X="8" Y="5.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAABCAAQQAABAAAAEAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAABCAAQQAABAAAAEAAAAAAAAAAAAAAEAAAAAA=</HashCode>
       <FileName>Models\Map.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
@@ -115,7 +115,7 @@
   <Class Name="GoldRush.Models.Track">
     <Position X="5.25" Y="5.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAEAAAAAAAgAgAAAIAAAAEAAAAAAAAEAAAAQAAAA=</HashCode>
+      <HashCode>AAAAAEAgAAIAAgAgAAAIAAAAEAAAAAAAAEAAAAQAAAA=</HashCode>
       <FileName>Models\Track.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -125,7 +125,7 @@
   <Class Name="GoldRush.Models.DirectionExtension">
     <Position X="12.75" Y="4.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAgAA=</HashCode>
       <FileName>Models\Direction.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -134,6 +134,13 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
       <FileName>Models\Cart.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoldRush.Models.Tracks.SwitchTrack">
+    <Position X="2.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAIAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Tracks\SwitchTrack.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Enum Name="GoldRush.Models.Direction">

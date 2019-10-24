@@ -1,11 +1,12 @@
-﻿using System.Text;
+﻿using System;
+using System.Text;
 using GoldRush.Controllers.Impl;
 
 namespace GoldRush.Views.Impl
 {
     public class GameView : View<GameController>
     {
-        public GameView(GameController controller) : base(controller)
+        public GameView(GameController controller) : base(controller, new SwitchInput(0, controller), new SwitchInput(1, controller), new SwitchInput(2, controller), new SwitchInput(3, controller), new SwitchInput(4, controller))
         {
         }
 
@@ -22,6 +23,13 @@ namespace GoldRush.Views.Impl
 
                 builder.AppendLine();
             }
+        }
+    }
+
+    internal class SwitchInput : Input
+    {
+        public SwitchInput(int number, GameController controller) : base((number + 1).ToString()[0], () => { controller.ToggleSwitch(number); })
+        {
         }
     }
 }
