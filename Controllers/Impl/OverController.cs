@@ -23,5 +23,10 @@ namespace GoldRush.Controllers.Impl
             _program.Game.Initialize();
             _program.OpenController<GameController>();
         }
+
+        public void Stop()
+        {
+            _program.Stop();
+        }
     }
 }
