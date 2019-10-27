@@ -20,7 +20,7 @@ namespace GoldRush.Models.Tracks
 
         public override Cart Update(Predicate<Track> attemptUpdate)
         {
-            if (_game.Random.Next(35 - _game.Interval) != 0)
+            if (_game.Random.Next(10) != 0)
             {
                 return null;
             }
