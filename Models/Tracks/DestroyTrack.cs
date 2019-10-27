@@ -10,9 +10,11 @@ namespace GoldRush.Models.Tracks
 
         public override Cart Update(Predicate<Track> attemptUpdate)
         {
+            var cart = Cart;
+
             Cart = null;
 
-            return null;
+            return cart;
         }
     }
 }

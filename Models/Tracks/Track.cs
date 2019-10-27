@@ -67,8 +67,7 @@ namespace GoldRush.Models
             {
                 return null;
             }
-
-            if (track.Cart != null && !attemptUpdate(track))
+            else if (track.Cart != null && !attemptUpdate(track))
             {
                 if (CanCrash())
                 {
