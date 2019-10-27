@@ -15,6 +15,7 @@ namespace GoldRush.Models.Tracks
 
         public override bool CanCrash()
         {
+            // Carts don't crash on this track!
             return false;
         }
     }

@@ -11,10 +11,12 @@ namespace GoldRush.Views.Impl
 
         public override void Draw(StringBuilder builder)
         {
+            // Receive 2d array of symbols
             var map = _controller.GetMap();
             var width = map.GetLength(0);
             var height = map.GetLength(1);
 
+            // Draw game data
             builder.AppendLine($"score: {_controller.GetScore()}");
             builder.AppendLine($"time: {_controller.GetTime()}s");
             builder.AppendLine($"┌{new string('─', width)}┐");
@@ -25,6 +27,7 @@ namespace GoldRush.Views.Impl
 
                 for (var x = 0; x < width; x++)
                 {
+                    // Draw the symbols in the array
                     builder.Append($"{map[x, y]}");
                 }
 
@@ -32,12 +35,14 @@ namespace GoldRush.Views.Impl
             }
 
             var underline = new StringBuilder(new string('─', width));
-            var switches = _controller.GetSwitches();
+            // Get the action ids
+            var switches = _controller.GetActions();
 
             for (var i = 0; i < switches.Length; i++)
             {
                 if (switches[i] != ' ')
                 {
+                    // Add fancy underline line
                     underline[i] = '┬';
                 }
             }
@@ -49,7 +54,7 @@ namespace GoldRush.Views.Impl
 
     internal class SwitchInput : Input
     {
-        public SwitchInput(int number, GameController controller) : base((number + 1).ToString()[0], () => { controller.ToggleSwitch(number); })
+        public SwitchInput(int number, GameController controller) : base((number + 1).ToString()[0], () => { controller.PerformAction(number); })
         {
         }
     }

@@ -12,6 +12,7 @@ namespace GoldRush.Controllers.Impl
 
         public override void Update()
         {
+            // Go to game over view when carts collided
             if (_program.Game.Over)
             {
                 _program.OpenController<OverController>();
@@ -48,7 +49,7 @@ namespace GoldRush.Controllers.Impl
             return drawn;
         }
 
-        public string GetSwitches()
+        public string GetActions()
         {
             var map = _program.Game.Map;
             var switches = new StringBuilder($"{new string(' ', map.Width)}");
@@ -65,7 +66,7 @@ namespace GoldRush.Controllers.Impl
             return switches.ToString();
         }
 
-        public void ToggleSwitch(int number)
+        public void PerformAction(int number)
         {
             var map = _program.Game.Map;
             var current = 0;

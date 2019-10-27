@@ -16,16 +16,19 @@ namespace GoldRush.Models.Tracks
 
         public override bool HasAction()
         {
+            // This track has a special action!
             return true;
         }
 
         public override void PerformAction()
         {
+            // Can't switch when a cart is on the track
             if (Cart != null)
             {
                 return;
             }
 
+            // Switch the correct direction
             if (_switchOutput)
             {
                 Output = Output.Opposite();

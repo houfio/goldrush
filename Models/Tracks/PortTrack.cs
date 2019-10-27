@@ -21,6 +21,7 @@ namespace GoldRush.Models.Tracks
 
         public override Cart Update(Predicate<Track> attemptUpdate)
         {
+            // When no capacity, refill at random
             if (_capacity == 0 && _game.Random.Next(5) == 0)
             {
                 _capacity = 8;
@@ -31,20 +32,24 @@ namespace GoldRush.Models.Tracks
 
         public override void OnEnter()
         {
+            // When there's no capacity, don't empty the carts
             if (_capacity == 0)
             {
                 return;
             }
 
+            // Empty the cart
             Cart.Full = false;
 
             _game.Score++;
 
+            // Increase the game difficulty at random
             if (_game.Random.Next(3) == 0)
             {
                 _game.DecreaseInterval();
             }
 
+            // When full, add 10 points
             if (--_capacity == 0)
             {
                 _game.Score += 10;

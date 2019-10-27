@@ -12,6 +12,7 @@ namespace GoldRush.Models.Tracks
         {
             var cart = Cart;
 
+            // Destroy cart
             Cart = null;
 
             return cart;

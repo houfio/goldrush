@@ -8,7 +8,7 @@ namespace GoldRush.Models.Tracks
     {
         private string _number;
 
-        public WarehouseTrack(Game game, string number) : base(game, Direction.East, Direction.East)
+        public WarehouseTrack(Game game, Direction output, string number) : base(game, output, output)
         {
             _number = number;
         }
@@ -20,21 +20,23 @@ namespace GoldRush.Models.Tracks
 
         public override Cart Update(Predicate<Track> attemptUpdate)
         {
+            // Add a cart at random
             if (_game.Random.Next(10) != 0)
             {
                 return null;
             }
 
-            var position = Output.Offset(Position);
-            var track = _game.Map.GetTrack(position);
+            var track = Next;
 
-            if (track == null || (track.Cart != null && track.CanCrash()))
+            // If next track is occupied or non-existent, don't add it
+            if (track == null || track.Cart != null)
             {
                 return null;
             }
 
             track.Cart = new Cart();
 
+            // Mark the cart as updated
             return track.Cart;
         }
     }

@@ -41,11 +41,11 @@ namespace GoldRush.Models
             _tracks[4, 2] = new Track(game, Direction.West, Direction.South);
             _tracks[3, 2] = new Track(game, Direction.West, Direction.East);
             _tracks[2, 2] = new Track(game, Direction.West, Direction.East);
-            _tracks[1, 2] = new WarehouseTrack(game, "A");
+            _tracks[1, 2] = new WarehouseTrack(game, Direction.East, "A");
             _tracks[4, 4] = new Track(game, Direction.West, Direction.North);
             _tracks[3, 4] = new Track(game, Direction.West, Direction.East);
             _tracks[2, 4] = new Track(game, Direction.West, Direction.East);
-            _tracks[1, 4] = new WarehouseTrack(game, "B");
+            _tracks[1, 4] = new WarehouseTrack(game, Direction.East, "B");
             _tracks[10, 4] = new Track(game, Direction.West, Direction.North);
             _tracks[9, 4] = new Track(game, Direction.South, Direction.East);
             _tracks[9, 5] = new SwitchTrack(game, Direction.West, Direction.North, true);
@@ -59,7 +59,7 @@ namespace GoldRush.Models
             _tracks[4, 6] = new Track(game, Direction.West, Direction.East);
             _tracks[3, 6] = new Track(game, Direction.West, Direction.East);
             _tracks[2, 6] = new Track(game, Direction.West, Direction.East);
-            _tracks[1, 6] = new WarehouseTrack(game, "C");
+            _tracks[1, 6] = new WarehouseTrack(game, Direction.East, "C");
             _tracks[9, 6] = new Track(game, Direction.North, Direction.East);
             _tracks[10, 6] = new Track(game, Direction.West, Direction.East);
             _tracks[11, 6] = new Track(game, Direction.West, Direction.East);

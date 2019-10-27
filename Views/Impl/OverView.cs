@@ -12,6 +12,7 @@ namespace GoldRush.Views.Impl
         public override void Draw(StringBuilder builder)
         {
             builder.AppendLine("game over");
+            builder.AppendLine("---");
             builder.AppendLine("press s to try again or e to exit");
         }
     }

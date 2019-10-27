@@ -13,6 +13,7 @@ namespace GoldRush.Controllers.Impl
 
         public override void Update()
         {
+            // Update the glimmer animation tick
             Tick = (Tick + 5) % 100;
         }
 
