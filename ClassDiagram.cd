@@ -1,10 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="GoldRush.Views.View">
-    <Position X="14" Y="9" Width="1.5" />
+  <Class Name="GoldRush.Views.View" Collapsed="true">
+    <Position X="15.75" Y="8" Width="1.5" />
     <Members>
       <Field Name="_inputs" Hidden="true" />
     </Members>
+    <AssociationLine Name="Inputs" Type="GoldRush.Views.Input" FixedFromPoint="true">
+      <Path>
+        <Point X="16.5" Y="8" />
+        <Point X="16.5" Y="7.062" />
+      </Path>
+    </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAgAAAAAAAAAEEAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Views\View.cs</FileName>
@@ -16,52 +22,57 @@
       <Property Name="Inputs" />
     </ShowAsCollectionAssociation>
   </Class>
-  <Class Name="GoldRush.Views.View&lt;T&gt;">
-    <Position X="14" Y="11" Width="1.5" />
+  <Class Name="GoldRush.Views.View&lt;T&gt;" Collapsed="true">
+    <Position X="18.25" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
       <FileName>Views\View.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="GoldRush.Views.Input">
-    <Position X="14" Y="6.5" Width="1.5" />
+  <Class Name="GoldRush.Views.Input" Collapsed="true">
+    <Position X="15.75" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAQ=</HashCode>
       <FileName>Views\Input.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="GoldRush.Views.Impl.StartView">
-    <Position X="12" Y="13.25" Width="1.5" />
+  <Class Name="GoldRush.Views.Impl.StartView" Collapsed="true">
+    <Position X="18.25" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Views\Impl\StartView.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="GoldRush.Views.Impl.GameView">
-    <Position X="14" Y="13.25" Width="1.5" />
+  <Class Name="GoldRush.Views.Impl.GameView" Collapsed="true">
+    <Position X="20.75" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Views\Impl\GameView.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="GoldRush.Controllers.Controller">
-    <Position X="8" Y="8.75" Width="1.5" />
+  <Class Name="GoldRush.Controllers.Controller" Collapsed="true">
+    <Position X="15.75" Y="11" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Controllers\Controller.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="GoldRush.Controllers.Controller&lt;T&gt;">
-    <Position X="8" Y="11" Width="1.5" />
+  <Class Name="GoldRush.Controllers.Controller&lt;T&gt;" Collapsed="true">
+    <Position X="18.25" Y="11" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Controllers\Controller.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="GoldRush.Program">
-    <Position X="11" Y="9.25" Width="1.5" />
+  <Class Name="GoldRush.Program" Collapsed="true">
+    <Position X="15.75" Y="9.5" Width="1.5" />
+    <AssociationLine Name="Game" Type="GoldRush.Models.Game">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.239" Y="0.096" />
+      </MemberNameLabel>
+    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAQAAAAAAAAAAQAAAAAAAAAAEAgAABAAICAABEAAAQA=</HashCode>
+      <HashCode>AAUAAAAAAAAAAQAAAAAAAAAAEAgAABAAICAABEAAAQA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -70,69 +81,138 @@
       <Property Name="Game" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="GoldRush.Models.Game">
-    <Position X="11" Y="6" Width="1.5" />
-    <AssociationLine Name="Map" Type="GoldRush.Models.Map" FixedFromPoint="true">
+  <Class Name="GoldRush.Models.Game" Collapsed="true">
+    <Position X="11" Y="9.5" Width="1.5" />
+    <AssociationLine Name="Map" Type="GoldRush.Models.Map" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="11" Y="6.75" />
-        <Point X="9.5" Y="6.75" />
+        <Point X="11" Y="9.936" />
+        <Point X="10.625" Y="9.936" />
+        <Point X="10.625" Y="10.612" />
+        <Point X="11" Y="10.612" />
       </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.106" Y="0.242" />
+      </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAQAAAAAADAAAQEAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAQAgAAAABAAAQgAAIIAAAAAAAAABAAAAAAAAAAAQAQ=</HashCode>
       <FileName>Models\Game.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Map" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="GoldRush.Controllers.Impl.StartController">
-    <Position X="6" Y="13" Width="1.5" />
+  <Class Name="GoldRush.Controllers.Impl.StartController" Collapsed="true">
+    <Position X="20.75" Y="11" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAACAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAQAA=</HashCode>
       <FileName>Controllers\Impl\StartController.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="GoldRush.Controllers.Impl.GameController">
-    <Position X="8" Y="13" Width="1.5" />
+  <Class Name="GoldRush.Controllers.Impl.GameController" Collapsed="true">
+    <Position X="18.25" Y="12.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ABQAAAAAAAAAAAAAAAEgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>ARQAAAAAAAAAAAAgAAEgAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
       <FileName>Controllers\Impl\GameController.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="GoldRush.Models.Map">
-    <Position X="8" Y="5.25" Width="1.5" />
+  <Class Name="GoldRush.Models.Map" Collapsed="true">
+    <Position X="11" Y="10.5" Width="1.5" />
+    <AssociationLine Name="_tracks" Type="GoldRush.Models.Track" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="11" Y="10.868" />
+        <Point X="10.062" Y="10.868" />
+        <Point X="10.062" Y="10.062" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-0.462" Y="0.387" Height="0.182" Width="0.737" />
+      </MemberNameLabel>
+    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAQAAAAABCAAQQAABAAAAEAAAAAABAAAAAAAEAAAAAA=</HashCode>
+      <HashCode>AAQAAAAABCAAQQAABAAAAEAAAAAAAAAAAAAAEAAAAAA=</HashCode>
       <FileName>Models\Map.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
       <Field Name="_tracks" />
     </ShowAsCollectionAssociation>
   </Class>
-  <Class Name="GoldRush.Controllers.Impl.OverController">
-    <Position X="10" Y="13" Width="1.5" />
+  <Class Name="GoldRush.Controllers.Impl.OverController" Collapsed="true">
+    <Position X="20.75" Y="12.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>EAQAAAAAAAAAAAAAAAEAAAAAAAAAAAAAIAAAAAAAAAA=</HashCode>
       <FileName>Controllers\Impl\OverController.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="GoldRush.Views.Impl.OverView">
-    <Position X="16" Y="13.25" Width="1.5" />
+  <Class Name="GoldRush.Views.Impl.OverView" Collapsed="true">
+    <Position X="20.75" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Views\Impl\OverView.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="GoldRush.Models.Track">
-    <Position X="5.25" Y="5.5" Width="1.5" />
-    <AssociationLine Name="Output" Type="GoldRush.Models.Direction">
+  <Class Name="GoldRush.Models.Track" Collapsed="true">
+    <Position X="8.75" Y="9.5" Width="1.5" />
+    <AssociationLine Name="Input" Type="GoldRush.Models.Direction" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="9.75" Y="10.062" />
+        <Point X="9.75" Y="11.317" />
+        <Point X="9.75" Y="11.317" />
+        <Point X="9.75" Y="11.25" />
+      </Path>
       <MemberNameLabel ManuallyPlaced="true">
-        <Position X="-0.857" Y="0.1" />
+        <Position X="-0.294" Y="-0.322" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Output" Type="GoldRush.Models.Direction" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="9.188" Y="10.062" />
+        <Point X="9.188" Y="11.25" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.357" Y="0.383" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Cart" Type="GoldRush.Models.Cart" FixedFromPoint="true">
+      <Path>
+        <Point X="8.75" Y="9.75" />
+        <Point X="7.25" Y="9.75" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="_game" Type="GoldRush.Models.Game" FixedFromPoint="true">
+      <Path>
+        <Point X="10.25" Y="9.741" />
+        <Point X="11" Y="9.741" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.041" Y="0.06" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Next" Type="GoldRush.Models.Track" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="8.75" Y="9.625" />
+        <Point X="8.485" Y="9.625" />
+        <Point X="8.485" Y="9.18" />
+        <Point X="8.938" Y="9.18" />
+        <Point X="8.938" Y="9.5" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.152" Y="0.01" Height="0.182" Width="0.663" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Previous" Type="GoldRush.Models.Track" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="8.938" Y="10.062" />
+        <Point X="8.938" Y="10.361" />
+        <Point X="8.485" Y="10.361" />
+        <Point X="8.485" Y="9.938" />
+        <Point X="8.75" Y="9.938" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.096" Y="-0.307" />
       </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAQAAEAgAAIAEgAgAAAIAAAAEAAAAACAAIAAAAQAAAQ=</HashCode>
+      <HashCode>AgQAAEAgAIIAEgAgAAAIAAAAEAAAAACAAIAAAAQAAAQ=</HashCode>
       <FileName>Models\Tracks\Track.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -140,59 +220,61 @@
       <Property Name="Input" />
       <Property Name="Output" />
       <Property Name="Cart" />
+      <Property Name="Next" />
+      <Property Name="Previous" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="GoldRush.Models.DirectionExtension">
-    <Position X="3.25" Y="10" Width="1.5" />
+  <Class Name="GoldRush.Models.DirectionExtension" Collapsed="true">
+    <Position X="5.75" Y="10.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAgAA=</HashCode>
       <FileName>Models\Direction.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="GoldRush.Models.Cart">
-    <Position X="2.25" Y="6" Width="1.5" />
+  <Class Name="GoldRush.Models.Cart" Collapsed="true">
+    <Position X="5.75" Y="9.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAgAAAAAAAAA=</HashCode>
       <FileName>Models\Cart.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="GoldRush.Models.Tracks.SwitchTrack">
-    <Position X="7.25" Y="2.5" Width="1.5" />
+  <Class Name="GoldRush.Models.Tracks.SwitchTrack" Collapsed="true">
+    <Position X="13.25" Y="8" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAgAAIAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAgAIIAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\Tracks\SwitchTrack.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="GoldRush.Models.Tracks.WarehouseTrack">
-    <Position X="5.25" Y="2.5" Width="1.5" />
+  <Class Name="GoldRush.Models.Tracks.WarehouseTrack" Collapsed="true">
+    <Position X="4.5" Y="8" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <HashCode>AAQAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
       <FileName>Models\Tracks\WarehouseTrack.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="GoldRush.Models.Tracks.ShuntingTrack">
-    <Position X="3.25" Y="2.5" Width="1.5" />
+  <Class Name="GoldRush.Models.Tracks.ShuntingTrack" Collapsed="true">
+    <Position X="8.75" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAACAAAAAAAAAAAA=</HashCode>
       <FileName>Models\Tracks\ShuntingTrack.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="GoldRush.Models.Tracks.DestroyTrack">
-    <Position X="9.25" Y="2.5" Width="1.5" />
+  <Class Name="GoldRush.Models.Tracks.DestroyTrack" Collapsed="true">
+    <Position X="11" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\Tracks\DestroyTrack.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="GoldRush.Models.Tracks.PortTrack">
-    <Position X="1.25" Y="2.5" Width="1.5" />
+  <Class Name="GoldRush.Models.Tracks.PortTrack" Collapsed="true">
+    <Position X="6.5" Y="8" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAIAAAAAAAAA=</HashCode>
+      <HashCode>AAQAAAAAAIAAAAAAAAAAAAQAAAAAAAAAAIAAAAAAAAA=</HashCode>
       <FileName>Models\Tracks\PortTrack.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Enum Name="GoldRush.Models.Direction">
-    <Position X="5.25" Y="10" Width="1.5" />
+  <Enum Name="GoldRush.Models.Direction" Collapsed="true">
+    <Position X="8.75" Y="11.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AACAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAABAAQ=</HashCode>
       <FileName>Models\Direction.cs</FileName>

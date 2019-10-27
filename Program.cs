@@ -81,6 +81,7 @@ namespace GoldRush
                     _queueClear = false;
                 }
 
+                Console.CursorVisible = false;
                 Console.SetCursorPosition(0, 0);
                 Console.Write(builder.ToString());
 
@@ -91,7 +92,6 @@ namespace GoldRush
         public static void Main(string[] args)
         {
             Console.Title = "GoldRush";
-            Console.CursorVisible = false;
 
             new Program();
         }

@@ -12,6 +12,8 @@ namespace GoldRush.Models
         public Direction Input { get; protected set; }
         public Direction Output { get; protected set; }
         public Cart Cart { get; internal set; }
+        public Track Previous => _game.Map.GetTrack(Input.Offset(Position));
+        public Track Next => _game.Map.GetTrack(Output.Offset(Position));
 
         protected readonly Game _game;
         private readonly Dictionary<(Direction, Direction), string> _symbols = new Dictionary<(Direction, Direction), string>
@@ -60,10 +62,9 @@ namespace GoldRush.Models
                 return null;
             }
 
-            var next = Output.Offset(Position);
-            var track = _game.Map.GetTrack(next);
+            var track = Next;
 
-            if (track == null || track.Input != Output.Opposite())
+            if (track == null || track.Previous != this)
             {
                 return null;
             }
