@@ -1,4 +1,5 @@
 ﻿using Pastel;
+using System;
 using System.Drawing;
 
 namespace GoldRush.Models.Tracks
@@ -11,21 +12,21 @@ namespace GoldRush.Models.Tracks
         {
         }
 
-        public override string Draw()
+        public override string GetSymbol()
         {
-            var character = _capacity == 0 ? base.Draw() : _capacity < 3 ? "▓" : _capacity < 6 ? "▒" : "░";
+            var character = _capacity == 0 ? base.GetSymbol() : _capacity < 3 ? "▓" : _capacity < 6 ? "▒" : "░";
 
             return character.Pastel(GetColor()).PastelBg(Color.Blue);
         }
 
-        public override Cart Update()
+        public override Cart Update(Predicate<Track> attemptUpdate)
         {
             if (_capacity == 0 && _game.Random.Next(5) == 0)
             {
                 _capacity = 8;
             }
 
-            return base.Update();
+            return base.Update(attemptUpdate);
         }
 
         public override void OnEnter()

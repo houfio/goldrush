@@ -1,4 +1,5 @@
 ﻿using Pastel;
+using System;
 using System.Drawing;
 
 namespace GoldRush.Models.Tracks
@@ -12,12 +13,12 @@ namespace GoldRush.Models.Tracks
             _number = number;
         }
 
-        public override string Draw()
+        public override string GetSymbol()
         {
             return _number.Pastel(Color.White).PastelBg(Color.Red);
         }
 
-        public override Cart Update()
+        public override Cart Update(Predicate<Track> attemptUpdate)
         {
             if (_game.Random.Next(35 - _game.Interval) != 0)
             {

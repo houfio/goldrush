@@ -116,20 +116,28 @@ namespace GoldRush.Models
         public void Update()
         {
             var updated = new List<Cart>();
-
-            Each((x, y, track) =>
+            bool attemptUpdate(Track track)
             {
                 if (track == null || (track.Cart != null && updated.Contains(track.Cart)))
                 {
-                    return;
+                    return false;
                 }
 
-                var cart = track.Update();
+                var cart = track.Update(attemptUpdate);
 
                 if (cart != null)
                 {
                     updated.Add(cart);
+
+                    return true;
                 }
+
+                return false;
+            }
+
+            Each((x, y, track) =>
+            {
+                attemptUpdate(track);
             });
         }
     }

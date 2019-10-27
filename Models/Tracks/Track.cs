@@ -1,4 +1,5 @@
 ﻿using Pastel;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -31,7 +32,7 @@ namespace GoldRush.Models
             Output = output;
         }
 
-        public virtual string Draw()
+        public virtual string GetSymbol()
         {
             var symbol = _symbols.Keys.Where((key) => (key.Item1 == Input && key.Item2 == Output) || (key.Item1 == Output && key.Item2 == Input)).First();
 
@@ -52,7 +53,7 @@ namespace GoldRush.Models
         {
         }
 
-        public virtual Cart Update()
+        public virtual Cart Update(Predicate<Track> attemptUpdate)
         {
             if (Cart == null)
             {
@@ -67,7 +68,7 @@ namespace GoldRush.Models
                 return null;
             }
 
-            if (track.Cart != null)
+            if (track.Cart != null && !attemptUpdate(track))
             {
                 if (CanCrash())
                 {

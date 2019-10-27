@@ -1,4 +1,6 @@
-﻿namespace GoldRush.Models.Tracks
+﻿using System;
+
+namespace GoldRush.Models.Tracks
 {
     public class DestroyTrack : Track
     {
@@ -6,7 +8,7 @@
         {
         }
 
-        public override Cart Update()
+        public override Cart Update(Predicate<Track> attemptUpdate)
         {
             Cart = null;
 

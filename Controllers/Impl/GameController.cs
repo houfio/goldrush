@@ -42,7 +42,7 @@ namespace GoldRush.Controllers.Impl
 
             map.Each((x, y, track) =>
             {
-                drawn[x, y] = track == null ? " " : track.Draw();
+                drawn[x, y] = track == null ? " " : track.GetSymbol();
             });
 
             return drawn;

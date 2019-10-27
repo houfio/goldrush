@@ -12,7 +12,7 @@ namespace GoldRush.Models.Tracks
             _switchOutput = switchOutput;
         }
 
-        public override string Draw() => base.Draw().PastelBg(Color.Gray);
+        public override string GetSymbol() => base.GetSymbol().PastelBg(Color.Gray);
 
         public override bool HasAction()
         {
